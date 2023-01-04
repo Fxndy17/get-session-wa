@@ -1,3 +1,3 @@
 # get-session-wa
 
-A
+test aj
