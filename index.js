@@ -5,6 +5,8 @@ const path = require('path')
 const fs = require('fs')
 const chalk = require('chalk')
 
+const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
+
 async function start() {
   const momol = fendiConnect({
 	  logger: pino({ level: 'silent' }),
