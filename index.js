@@ -56,6 +56,13 @@ async function start() {
   momol.public = true
 
   momol.ev.on('creds.update', saveState)
+  
+  momol.ev.on('connection.update', async (update) => {
+    const { connection, lastDisconnect } = update
+    if (connection === 'open') {
+      console.log('Bot conneted to server')
+    }
+  })
   return momol
 }
 
